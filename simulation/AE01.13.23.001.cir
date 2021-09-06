@@ -1,0 +1,8 @@
+.title KiCad schematic
+.include "models/TVS_Diode_SMAJxxx_CA_SPICE_Model_txt.txt"
+V1 /IN 0 EXP(0 606 0 3.3u 10u 1443u) Rser=50
+XU1 /IN 0 SMAJ60CA
+V2 /GEN 0 EXP(0 606 0 3.3u 10u 1443u) Rser=50
+R2 /GEN 0 {ZL}
+R1 /IN 0 {ZL}
+.end

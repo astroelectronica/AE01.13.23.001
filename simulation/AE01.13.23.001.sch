@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SMAJ60CA Bidirectional TVS. 10/1000µsec EXP Waveform"
+Date "2020-03-27"
+Rev "1"
+Comp "astroelectronic@"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 5000 3000 0    50   ~ 0
+IN
+Wire Wire Line
+	6500 3650 6500 3850
+Connection ~ 4000 3000
+Wire Wire Line
+	4000 3000 4000 2900
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E7D5C95
+P 4000 2900
+F 0 "#FLG01" H 4000 2975 50  0001 C CNN
+F 1 "PWR_FLAG" H 4000 3073 50  0000 C CNN
+F 2 "" H 4000 2900 50  0001 C CNN
+F 3 "~" H 4000 2900 50  0001 C CNN
+	1    4000 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 5E7D564B
+P 4000 3850
+F 0 "#GND01" H 4000 3750 50  0001 C CNN
+F 1 "0" H 4000 3727 50  0000 C CNN
+F 2 "" H 4000 3850 50  0001 C CNN
+F 3 "~" H 4000 3850 50  0001 C CNN
+	1    4000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3250 4000 3000
+$Comp
+L Simulation_SPICE:VEXP V1
+U 1 1 5E7D45FB
+P 4000 3450
+F 0 "V1" H 4130 3496 50  0000 L CNN
+F 1 "EXP(0 606 0 3.3u 10u 1443u) Rser=50" H 4130 3405 50  0000 L CNN
+F 2 "" H 4000 3450 50  0001 C CNN
+F 3 "~" H 4000 3450 50  0001 C CNN
+F 4 "Y" H 4000 3450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 4000 3450 50  0001 L CNN "Spice_Primitive"
+	1    4000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3850 7500 3650
+$Comp
+L pspice:0 #GND03
+U 1 1 5E7D3EA8
+P 7500 3850
+F 0 "#GND03" H 7500 3750 50  0001 C CNN
+F 1 "0" H 7500 3727 50  0000 C CNN
+F 2 "" H 7500 3850 50  0001 C CNN
+F 3 "~" H 7500 3850 50  0001 C CNN
+	1    7500 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3350 7500 3000
+Wire Wire Line
+	6500 3000 7500 3000
+Connection ~ 6500 3000
+Wire Wire Line
+	4000 3000 6500 3000
+Wire Wire Line
+	6500 3350 6500 3000
+$Comp
+L pspice:0 #GND02
+U 1 1 5E7D19F0
+P 6500 3850
+F 0 "#GND02" H 6500 3750 50  0001 C CNN
+F 1 "0" H 6500 3727 50  0000 C CNN
+F 2 "" H 6500 3850 50  0001 C CNN
+F 3 "~" H 6500 3850 50  0001 C CNN
+	1    6500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_TVS U1
+U 1 1 5E7D0B22
+P 6500 3500
+F 0 "U1" V 6454 3579 50  0000 L CNN
+F 1 "SMAJ60CA" V 6545 3579 50  0000 L CNN
+F 2 "" H 6500 3500 50  0001 C CNN
+F 3 "~" H 6500 3500 50  0001 C CNN
+F 4 "X" H 6500 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "SMAJ60CA" H 6500 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6500 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/TVS_Diode_SMAJxxx_CA_SPICE_Model_txt.txt" H 6500 3500 50  0001 C CNN "Spice_Lib_File"
+	1    6500 3500
+	0    1    1    0   
+$EndComp
+Text Label 5000 5000 0    50   ~ 0
+GEN
+Wire Wire Line
+	4000 5750 4000 5650
+Connection ~ 4000 5750
+Wire Wire Line
+	3300 5750 3300 5650
+Wire Wire Line
+	4000 5750 3300 5750
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5E7E5751
+P 3300 5650
+F 0 "#FLG04" H 3300 5725 50  0001 C CNN
+F 1 "PWR_FLAG" H 3300 5823 50  0000 C CNN
+F 2 "" H 3300 5650 50  0001 C CNN
+F 3 "~" H 3300 5650 50  0001 C CNN
+	1    3300 5650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4000 5000
+Wire Wire Line
+	4000 5000 4000 4900
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E7E5759
+P 4000 4900
+F 0 "#FLG03" H 4000 4975 50  0001 C CNN
+F 1 "PWR_FLAG" H 4000 5073 50  0000 C CNN
+F 2 "" H 4000 4900 50  0001 C CNN
+F 3 "~" H 4000 4900 50  0001 C CNN
+	1    4000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND04
+U 1 1 5E7E575F
+P 4000 5850
+F 0 "#GND04" H 4000 5750 50  0001 C CNN
+F 1 "0" H 4000 5727 50  0000 C CNN
+F 2 "" H 4000 5850 50  0001 C CNN
+F 3 "~" H 4000 5850 50  0001 C CNN
+	1    4000 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5850 4000 5750
+Wire Wire Line
+	4000 5250 4000 5000
+$Comp
+L Simulation_SPICE:VEXP V2
+U 1 1 5E7E5769
+P 4000 5450
+F 0 "V2" H 4130 5496 50  0000 L CNN
+F 1 "EXP(0 606 0 3.3u 10u 1443u) Rser=50" H 4130 5405 50  0000 L CNN
+F 2 "" H 4000 5450 50  0001 C CNN
+F 3 "~" H 4000 5450 50  0001 C CNN
+F 4 "Y" H 4000 5450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 4000 5450 50  0001 L CNN "Spice_Primitive"
+	1    4000 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5850 7500 5650
+$Comp
+L pspice:0 #GND06
+U 1 1 5E7E5770
+P 7500 5850
+F 0 "#GND06" H 7500 5750 50  0001 C CNN
+F 1 "0" H 7500 5727 50  0000 C CNN
+F 2 "" H 7500 5850 50  0001 C CNN
+F 3 "~" H 7500 5850 50  0001 C CNN
+	1    7500 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5350 7500 5000
+Wire Wire Line
+	4000 3650 4000 3850
+$Comp
+L Device:R R2
+U 1 1 5E7E5777
+P 7500 5500
+F 0 "R2" H 7570 5546 50  0000 L CNN
+F 1 "{ZL}" H 7570 5455 50  0000 L CNN
+F 2 "" V 7430 5500 50  0001 C CNN
+F 3 "~" H 7500 5500 50  0001 C CNN
+F 4 "Y" H 7500 5500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 5 "R" H 7500 5500 50  0001 C CNN "Spice_Primitive"
+	1    7500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E7D3D4D
+P 7500 3500
+F 0 "R1" H 7570 3546 50  0000 L CNN
+F 1 "{ZL}" H 7570 3455 50  0000 L CNN
+F 2 "" V 7430 3500 50  0001 C CNN
+F 3 "~" H 7500 3500 50  0001 C CNN
+F 4 "Y" H 7500 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 5 "R" H 7500 3500 50  0001 C CNN "Spice_Primitive"
+	1    7500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5000 7500 5000
+$EndSCHEMATC

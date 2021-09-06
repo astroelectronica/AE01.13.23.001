@@ -1,0 +1,6 @@
+*10/1000usec EXP Waveform
+.include ../AE01.13.23.001.cir
+.param ZL=5000000
+.tran 0 10m 0 uic
+.backanno
+
